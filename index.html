@@ -3,44 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>首頁</title>
-    <style>
-        body {
-            background-color: lightblue;
-            font-family: '標楷體', Tahoma, Geneva, Verdana, sans-serif;
-            color: firebrick;
-            text-align: center;
-        }
+    <link rel="stylesheet" href="res/style.css">
 
-        .banner {
-            width: 240px;
-            display: inline-block;
-            background-color: rgb(182, 147, 163);
-            color: rgb(39, 25, 25);
-            font-size: 2rem;
-            margin: 12px;
-            padding-left: 24px;
-        }
-
-        #title {
-            background-color: blanchedalmond;
-            color: blueviolet;
-            font-size: 36px;
-            margin: 2px 6px 12px 32px;
-            padding-top: 64px;
-            padding: 12px;
-            text-align: center;
-        }
-
-        .table {
-            background-color: lightblue;
-            font-family: '標楷體', Tahoma, Geneva, Verdana, sans-serif;
-            color: firebrick;
-            text-align: left;
-            border: 2px black solid;
-
-        }
-    </style>
 </head>
 <!--註解方式-->>
 
@@ -99,37 +65,39 @@
     <img src="images/pic-3.jpg" alt="" width="32%">
 
     <div class="banner">一天所需卡路里</div>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>每天活動量</th>
-                <th>體重過輕者所需熱量</th>
-                <th>體重正常者所需熱量</th>
-                <th>體重過重、肥胖者所需熱量</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>輕度工作</td>
-                <td>35大卡 X 目前體重（公斤）</td>
-                <td>30大卡 X 目前體重（公斤）</td>
-                <td>20~25大卡 X 目前體重（公斤）</td>
-            </tr>
-            <tr>
-                <td>中度工作</td>
-                <td>40大卡 X 目前體重（公斤）</td>
-                <td>35大卡 X 目前體重（公斤）</td>
-                <td>30大卡 X 目前體重（公斤）</td>
-            </tr>
-            <tr>
-                <td>重度工作</td>
-                <td>45大卡 X 目前體重（公斤）</td>
-                <td>40大卡 X 目前體重（公斤）</td>
-                <td>35大卡 X 目前體重（公斤）</td>
-            </tr>
-        </tbody>
+    <div id="bmi-table">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>每天活動量</th>
+                    <th>體重過輕者所需熱量</th>
+                    <th>體重正常者所需熱量</th>
+                    <th>體重過重、肥胖者所需熱量</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>輕度工作</td>
+                    <td>35大卡 X 目前體重（公斤）</td>
+                    <td>30大卡 X 目前體重（公斤）</td>
+                    <td>20~25大卡 X 目前體重（公斤）</td>
+                </tr>
+                <tr>
+                    <td>中度工作</td>
+                    <td>40大卡 X 目前體重（公斤）</td>
+                    <td>35大卡 X 目前體重（公斤）</td>
+                    <td>30大卡 X 目前體重（公斤）</td>
+                </tr>
+                <tr>
+                    <td>重度工作</td>
+                    <td>45大卡 X 目前體重（公斤）</td>
+                    <td>40大卡 X 目前體重（公斤）</td>
+                    <td>35大卡 X 目前體重（公斤）</td>
+                </tr>
+            </tbody>
 
-    </table>
+        </table>
+    </div>
     <!-- 語法練習 加入兩行文字 -->
     <p>
         <a href="bmi.html">&copy;計算BMI: &nbsp;</a>
@@ -180,19 +148,7 @@
     <a target="_self" href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6">
         <h2>好文章連結</h2>
     </a>
-    <hr>
-    <div>一天所需卡路里</div>
-    <table>
-        <thead>
-            <tr>
-                <th>性別</th>
-                <th>年齡</th>
-                <th>體重</th>
-                <th>卡路里</th>
 
-            </tr>
-        </thead>
-    </table>
 </body>
 
 </html>

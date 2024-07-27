@@ -5,35 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算機</title>
+    <link rel="stylesheet" href="res/style.css">
+
+    <style>
+        .switch {
+            background-color: rgb(136, 132, 83);
+            display: inline-block;
+            width: 55%;
+            padding: 16px;
+            color: beige;
+            border: 2px white solid;
+            border-radius: 6px;
+        }
+
+        input {
+            margin: 6px;
+            width: 200px;
+        }
+
+        button {
+            background-color: lightsalmon;
+            border: 0px;
+            width: 80px;
+            padding: 3px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>BMI計算機</h1>
-    <form>
-        <label for="username">姓名</label>
-        <input id="username" name="username" type="text" placeholder="kerr"><br>
-        <label for="password">密碼</label>
-        <input id="password" name="password" type="text"><br>
-        <label for="date">生日</label>
-        <input name="date" type="date"><br>
-        <label for="height">身高</label>
-        <input id="height" step="0.1" name="height" type="number" placeholder="170"><br>
-        <label for="weight">體重</label>
-        <input id="weight" step="0.1" name="weight" type="number" placeholder="88.8"><br>
+    <div class="banner">BMI計算機</div><br>
+    <div class="switch">
+        <form>
+            <label for="username">姓名</label>
+            <input id="username" name="username" type="text" placeholder="kerr"><br>
+            <label for="password">密碼</label>
+            <input id="password" name="password" type="text"><br>
+            <label for="date">生日</label>
+            <input name="date" type="date"><br>
+            <label for="height">身高</label>
+            <input id="height" step="0.1" name="height" type="number" placeholder="170"><br>
+            <label for="weight">體重</label>
+            <input id="weight" step="0.1" name="weight" type="number" placeholder="88.8"><br>
 
 
 
-        <p><Button>計算</Button></p>
+            <p><Button>計算</Button></p>
 
 
 
 
 
 
-    </form>
+        </form><br>
 
-    <a href="index.html">返回
-
+        <a href="index.html">返回
+    </div>
 </body>
 
 </html>
