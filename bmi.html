@@ -11,7 +11,7 @@
         .switch {
             background-color: rgb(136, 132, 83);
             display: inline-block;
-            width: 55%;
+            width: 50%;
             padding: 16px;
             color: beige;
             border: 2px white solid;
@@ -20,7 +20,7 @@
 
         input {
             margin: 6px;
-            width: 200px;
+            width: 70%;
         }
 
         button {
@@ -29,6 +29,13 @@
             width: 80px;
             padding: 3px;
             border-radius: 3px;
+        }
+
+        @media screen and (max-width:750px) {
+            .switch {
+                width: 60%;
+            }
+
         }
     </style>
 </head>
