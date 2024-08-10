@@ -36,23 +36,66 @@
         * alert(result);
         */
 
-        let name = prompt("請輸入姓名:");
-        let heigh = prompt("請輸入身高:");
-        let weight = prompt("請輸入體重:");
-
-        let BMI = weight / (heigh / 100) ** 2;
-        console.log(name, heigh, weight, BMI)
-
-        document.write("<h1>${name}<h1>");
-        document.write("<li>${heigh}<li>");
-        document.write("<li>${weight}<li>");
-        document.write("<li>${bmi.toFixed(2)}<li>");
+        //輸入三次
+        //for i in range(3):
+        //for (let i =0; i<3; i++)
+        let count = 0;
+        let total = 0;
+        while (true) {
+            if (count == 3) {
+                break;
+            }
 
 
-        document.write("<br>" + "姓名為" + name, bmi.toFixed(2));
+            let name = prompt("請輸入姓名:");
+            let height = prompt("請輸入身高:");
+            let weight = prompt("請輸入體重:");
+
+            //身高/體重 輸入不能為空
+            // or => || and =>&&
+            if (height == "" || weight == "") {
+
+                alert("輸入不能為空!");
+            }
+            else {
+                // not =>!
+                //身高/體中 範圍1~500 (包含1,500),否則警告輸入數值不正確,不做計算
+                if (!isValid(height, 1, 300) || !isValid(weight, 1, 500)) {
+                    alert("輸入數值不正確(1~500)");
+                    continue;
+
+                }
+
+                let BMI = weight / (heigh / 100) ** 2;
+                console.log(name, heigh, weight, BMI, count)
+
+                if (isNaN(BMI)) {
+                    alert("輸入不正確!");
+
+                } else {
+
+                    document.write(`<h1>${name}</h1>`);
+                    document.write(`<li>${heigh}</li>`);
+                    document.write(`<li>${weight}</li>`);
+                    document.write(`<li>${bmi.toFixed(2)}</li>`);
+                    document.write(`<br>" + "姓名為" + name, bmi.toFixed(2)`);
+                    count++;
+                    total += BMI;
+                }
+            }
+        }
+
+        //輸入平均BMI
+        document.write(`<h1>平均BMI:${(total / count).tofixed(2)}</h1>`)
 
 
+        //document.write("<br>"+name + "bmi:" +bmi.toFixed(2));
+        //def isValid(value): ##for python
+        //return value>=1 and value<=500 ##for python
 
+        function isValid(value, start, end) {
+            return value >= start && value <= end;
+        }
     </script>
 
 </body>

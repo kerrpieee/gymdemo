@@ -43,31 +43,63 @@
 <body>
     <div class="banner">BMI計算機</div><br>
     <div class="switch">
-        <form>
-            <label for="username">姓名</label>
-            <input id="username" name="username" type="text" placeholder="kerr"><br>
-            <label for="password">密碼</label>
-            <input id="password" name="password" type="text"><br>
-            <label for="date">生日</label>
-            <input name="date" type="date"><br>
-            <label for="height">身高</label>
-            <input id="height" step="0.1" name="height" type="number" placeholder="170"><br>
-            <label for="weight">體重</label>
-            <input id="weight" step="0.1" name="weight" type="number" placeholder="88.8"><br>
+
+        <label for="username">姓名</label>
+        <input id="username" name="username" type="text" placeholder="kerr"><br>
+        <label for="password">密碼</label>
+        <input id="password" name="password" type="text"><br>
+        <label for="date">生日</label>
+        <input name="date" type="date"><br>
+        <label for="height">身高</label>
+        <input id="height" step="0.1" name="height" type="number" placeholder="170"><br>
+        <label for="weight">體重</label>
+        <input id="weight" step="0.1" name="weight" type="number" placeholder="88.8"><br>
+
+        <p><Button onclick="calcBMI()">計算</Button></p>
+
+    </div><br>
+
+    <a href="index.html">返回</a>
+    <p id="result">BMI:</p>
 
 
+    <script>
+        function calcBMI() {
 
-            <p><Button>計算</Button></p>
+            if (weightEl.value == "" || heightEl.value == "") {
+                resultEl.innerHTML = `<h1 style="color red">輸入不能為空!</h1>`;
+                return;
 
+            }
 
+            //計算BMI
+            let BMI = weightEl.value / (heightEl.value / 100) ** 2;
+            // isNaN 提示輸入不正確
+            if (isNaN(BMI)) {
+                resultEl.innerHTML = `<h1>輸入不正確!</h1>`;
+            } else {
+                resultEl.innerHTML = `<h1>BMI:${BMI.toFixed(2)}</h1>`;
+                //增加評語
+                let comment;
+                if (BMI < 18.5) {
+                    comment = "體重過輕";
+                } else if (BMI < 24) {
+                    comment = "體重正常";
+                } else (BMI > 24){
+                    comment = "體重異常";
+                }
+                commentE1.innerHTML = `<h2>${comment}</h2>`
+            }
+        }
+        let heightEl = document.querySelector("#height");
+        let weightEl = document.querySelector("#weight");
+        let bottonEl = document.querySelector("#botton");
+        let resultEl = document.querySelector("#result");
+        console.log(bottonEl, heightEl.value, weightEl.value);
 
+            
+        
 
+</body >
 
-
-        </form><br>
-
-        <a href="index.html">返回
-    </div>
-</body>
-
-</html>
+</html >
